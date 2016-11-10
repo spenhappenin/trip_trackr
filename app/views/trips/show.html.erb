@@ -1,0 +1,21 @@
+<h1> <%= @trip.title %> </h1>
+<br />
+
+<% if @trip.date %>
+	<p>Date: <%= @trip.date %> </p>
+<% end %>
+
+<% if @trip.length %>
+	<p>Length: <%= @trip.length %> </p>
+<% end %>
+
+<% if @trip.expense %>
+	<p>Expense: <%= @trip.expense %> </p>
+<% end %>
+
+<div>
+	<%= link_to "#{@trip.title.pluralize} Locations",
+		trip_locations_path(@trip) %> |
+
+	<%= link_to 'All Trips', trips_path %>
+</div>

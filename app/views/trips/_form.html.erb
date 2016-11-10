@@ -1,0 +1,33 @@
+<% if @trip.errors.any? %>
+	<h5> <% pluralize(@trip.errors.count, 'Error', 'Errors') %> Creating trip </h5>
+	<ul>
+		<%= @trip.errors.full_messages.each do |message| %>
+			<li> <%= message %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+
+
+<%= form_for @trip do |f| %>
+	<%= f.label :title %>:
+	<%= f.text_field :title %>
+	<br />
+
+	<%= f.label :date %>
+	<%= f.text_field :date %>
+	<br />
+
+	<%= f.label :length %>
+	<%= f.text_field :length %>
+	<br />
+
+	<%= f.label :expense %>
+	<%= f.text_field :expense %>
+	<br />
+
+	<%= f.submit %>
+<% end %>
+	<br />
+
+	<%= link_to 'Back', trips_path %>

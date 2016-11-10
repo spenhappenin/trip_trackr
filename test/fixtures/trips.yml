@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  length: MyString
+  expense: 1.5
+  date: MyString
+  has_many: 
+
+two:
+  title: MyString
+  length: MyString
+  expense: 1.5
+  date: MyString
+  has_many: 

@@ -1,0 +1,22 @@
+<% if @location.errors.any? %>
+  <h5> <%= pluralize(@location.errors.count, 'Error', 'Errors') %> Creating location </h5>
+  <ul>
+    <% @location.errors.full_messages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for [@trip, @location] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br />
+
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<br />
+
+	<%= f.submit %>
+<% end %>	
+

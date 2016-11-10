@@ -1,0 +1,18 @@
+<h1> All Trips </h1>
+<br />
+
+<% if @trips.any? %>
+	<ul>
+		<% @trips.each do |trip| %>
+			<li>
+				<%= link_to trip.title, trip_path(trip) %> |
+				<%= link_to 'Edit', edit_trip_path(trip) %> |
+				<%= link_to 'Delete', trip_path(trip), method: :delete, data: {confirm: 'Really delete?'} %> 
+			</li>
+		<% end %>
+	</ul>
+	<% else %>
+	<h3> Create a trip! </h3>
+<% end %>
+
+<%= link_to 'New Trip', new_trip_path %>

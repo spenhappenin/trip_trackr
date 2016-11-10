@@ -1,0 +1,22 @@
+<h1> Address:</h1>
+
+<% if @address.city %>
+	<p>City: <%= @address.city %> </p>
+<% end %>
+
+<% if @address.state %>
+	<p>State: <%= @address.state %> </p>
+<% end %>
+
+<% if @address.zip %>
+	<p>Zip: <%= @address.zip %> </p>
+<% end %>
+
+<% if @address.country %>
+	<p>Country: <%= @address.country %> </p>
+<% end %>
+
+<%= link_to '' %>
+
+<%= link_to 'All Locations', trip_locations_path(@location.trip) %>
+
